@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="theme-color" content="#101524" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='18' fill='%23101524' stroke='%23d5fd62' stroke-width='2'/%3E%3Ctext x='20' y='27' text-anchor='middle' font-family='sans-serif' font-size='22' fill='%23d5fd62'%3EN%3C/text%3E%3C/svg%3E" />
+  <title>Neon Run — Bunny Express</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-shell" id="gameShell">
+    <canvas id="game" aria-label="Neon Run endless runner game"></canvas>
+    <div class="vignette"></div>
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Neon Run home"><span class="brand-mark">N</span><span>NEON<span class="brand-light">/RUN</span></span></a>
+      <div class="season-tag"><span class="live-dot"></span> NIGHT SHIFT <span class="tag-divider">/</span> 01</div>
+      <button class="sound-button" id="soundButton" aria-label="Toggle sound"><span id="soundIcon">♫</span></button>
+    </header>
+    <section class="hud" id="hud" aria-live="polite">
+      <div class="score-block"><span class="eyebrow">DISTANCE</span><strong id="distance">0000</strong><span class="unit">M</span></div>
+      <div class="coin-counter"><span class="coin-icon">✦</span><span id="coinCount">00</span></div>
+      <div class="best-block"><span class="eyebrow">BEST RUN</span><strong id="bestScore">0000 <small>M</small></strong></div>
+    </section>
+    <div class="lane-hint" id="laneHint"><span class="hint-arrow">←</span> SWIPE TO DODGE <span class="hint-arrow">→</span></div>
+    <div class="overlay" id="overlay">
+      <div class="overlay-card" id="overlayCard">
+        <div class="card-kicker"><span class="kicker-line"></span> THE LAST TRAIN LEAVES AT 12 <span class="kicker-line"></span></div>
+        <h1>RUN THE<br><em>NIGHT.</em></h1>
+        <p class="intro-copy">Three lanes. One fearless bunny.<br>How far can you make it?</p>
+        <button class="play-button" id="playButton"><span>START RUN</span><span class="play-arrow">↗</span></button>
+        <div class="controls-row"><span><kbd>←</kbd><kbd>→</kbd> MOVE</span><i></i><span><kbd>↑</kbd> JUMP</span><i></i><span><kbd>↓</kbd> SLIDE</span></div>
+      </div>
+    </div>
+    <div class="toast" id="toast"></div>
+    <footer class="bottom-bar"><span>ENDLESS LINE <b>03</b></span><span class="bottom-center"><i></i> MIND THE GAP</span><span>V 1.0.4</span></footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
